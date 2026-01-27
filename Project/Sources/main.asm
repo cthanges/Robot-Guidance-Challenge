@@ -563,7 +563,7 @@ clrLCD:             LDAA  #$01
 
 del_50us            PSHX                                       ; (2 E-clk) Protect the X register
 
-eloop               LDX   #300                               ; (2 E-clk) Initialize the inner loop counter
+eloop               LDX   #300                                 ; (2 E-clk) Initialize the inner loop counter
 
 iloop               NOP                                        ; (1 E-clk) No operation
                     DBNE X,iloop                               ; (3 E-clk) Loop again if the inner counter is not 0
