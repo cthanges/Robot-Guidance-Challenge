@@ -1,4 +1,16 @@
 # Robot Guidance Challenge
+## Table of Contents
+- [Summary](#summary)
+- [Features](#features)
+  - [Guider](#guider)
+  - [Subsystems](#subsystems)
+    - [1. Navigation Manager](#1-navigation-manager)
+    - [2. Guidance Routine](#2-guidance-routine)
+    - [3. Sensor Scanner](#3-sensor-scanner)
+    - [4. Motor Speed Control](#4-motor-speed-control)
+    - [5. Rotation Counters](#5-rotation-counters)
+    - [6. Bumper Detectors](#6-bumper-detectors)
+
 ## Summary
 The objective of this project is to program an [eebot](https://www.ecb.torontomu.ca/~courses/coe538/Labs/eebot.pdf), a mobile robot built on an HCS12 microcontroller, to successfully traverse this maze:
 
