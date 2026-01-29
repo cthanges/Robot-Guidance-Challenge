@@ -1,4 +1,12 @@
 # Robot Guidance Challenge
+## Summary
+The objective of this project is to program an [eebot](https://www.ecb.torontomu.ca/~courses/coe538/Labs/eebot.pdf), a mobile robot built on an HCS12 microcontroller, to successfully traverse this maze:
 
-## Objective
-The objective of this project is to program an [eebot](https://www.ecb.torontomu.ca/~courses/coe538/Labs/eebot.pdf), a mobile robot built on an HCS12 microcontroller, to successfully traverse a maze.
+<p align="center">
+  <img src="Maze.png" width="500">
+</p>
+
+## Features
+### Guider
+
+### Subsystems
