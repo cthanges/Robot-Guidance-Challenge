@@ -151,11 +151,11 @@ Motor control subsystem manages differential drive steering through direction an
   - Setting both bits enables full-speed operation
 
 **Motor Control Routines:**
-- `INIT_FWD` - Both motors forward at full speed (BCLR PORTA,%00000011; BSET PTT,%00110000)
-- `INIT_REV` - Both motors reverse at full speed (BSET PORTA,%00000011; BSET PTT,%00110000)
-- `INIT_LEFT` - Differential steering for left turn (BSET PORTA bit 0, BCLR PORTA bit 1)
-- `INIT_RIGHT` - Differential steering for right turn (BSET PORTA bit 1, BCLR PORTA bit 0)
-- `INIT_STOP` - Disable both motors (BCLR PTT,%00110000)
+- `INIT_FWD`: Both motors forward at full speed (BCLR PORTA,%00000011; BSET PTT,%00110000)
+- `INIT_REV`: Both motors reverse at full speed (BSET PORTA,%00000011; BSET PTT,%00110000)
+- `INIT_LEFT`: Differential steering for left turn (BSET PORTA bit 0, BCLR PORTA bit 1)
+- `INIT_RIGHT`: Differential steering for right turn (BSET PORTA bit 1, BCLR PORTA bit 0)
+- `INIT_STOP`: Disable both motors (BCLR PTT,%00110000)
 
 **Steering Mechanism:**
 - Turns executed by setting opposite directions on PORT and STBD motors
@@ -166,7 +166,7 @@ Motor control subsystem manages differential drive steering through direction an
 While traditional rotation counters (wheel encoders) are specified, this implementation uses a timer-based turning system:
 
 **Timer Subsystem:**
-- `TOF_COUNTER` - 8-bit counter incremented at 23Hz by Timer Overflow Interrupt
+- `TOF_COUNTER`: 8-bit counter incremented at 23Hz by Timer Overflow Interrupt
 - Timer initialized via `ENABLE_TOF` routine (TSCR1, TSCR2 configuration)
 - Prescaler set to 16 for appropriate overflow rate
 
@@ -177,7 +177,7 @@ While traditional rotation counters (wheel encoders) are specified, this impleme
 - Turn states check if `TOF_COUNTER` ≥ `T_TURN` to determine completion
 
 **ISR Implementation:**
-- `TOF_ISR` - Increments `TOF_COUNTER` and clears TOF flag
+- `TOF_ISR`: Increments `TOF_COUNTER` and clears TOF flag
 - Interrupt vector at $FFDE points to `TOF_ISR`
 - Provides consistent timing regardless of main loop execution
 
